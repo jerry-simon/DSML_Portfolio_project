@@ -25,6 +25,7 @@ pip install -r requirements.txt
 ```
 
 🚀 Running the API
+
 1. Development Server (Flask)
 ```bash
 python ProductSalesForecasting.py #VS code editor
@@ -36,13 +37,17 @@ Make sure you use the correct command to run the Flask application, depending on
 This will start the server on http://127.0.0.1:5000/.
 
 2. Production Server (Gunicorn + Flask) # Optional
+
+```bash
 gunicorn -w 4 -b 0.0.0.0:5000 app: app
+```
 
 -w 4 → number of workers (adjust as per server capacity).
 
 app: app → first app is the filename (app.py), second app is the Flask object inside.
 
 📬 API Endpoints
+
 POST /PREDICT
 
 Make a sales prediction.
@@ -76,7 +81,9 @@ Output (JSON Response):
 ```
 
 b) SARIMAX Regression
+
 **Possible question: What will be the predicted sales on 06-06-2019 if 30% of stores are on holiday, 60% offer a discount, and the remaining 10% operate normally?**
+
 Input (JSON via Postman or other client):
 ```bash
 {
@@ -96,7 +103,9 @@ Output (JSON Response):
 }
 ```
 c) SARIMAX Regression
+
 **Possible question: What will be the predicted Sales on 06-06-2019?**
+
 Input (JSON via Postman or other client):
 ```bash
 {
@@ -146,3 +155,4 @@ scikit-learn
 CatBoost
 
 Joblib
+
