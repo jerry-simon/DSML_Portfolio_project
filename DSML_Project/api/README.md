@@ -5,8 +5,8 @@ This API serves predictions for product sales using CatBoostRegressor and SARIMA
 # 📦 Project Setup
 1. Clone or Download Repository
 ```bash
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone https://github.com/jerry-simon/DSML_Portfolio_project/tree/48507f820cb1908962c8e3354e806288743f08e0/DSML_Project
+cd DSML_Project
 ```
 
 3. Create Virtual Environment
@@ -155,4 +155,5 @@ scikit-learn
 CatBoost
 
 Joblib
+
 
