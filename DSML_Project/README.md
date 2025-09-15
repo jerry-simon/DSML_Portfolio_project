@@ -1,34 +1,35 @@
-🛒 Product Sales Forecasting
+# 🛒 Product Sales Forecasting
 
-This project forecasts daily product sales using a combination of machine learning and time-series forecasting techniques.
+This project forecasts daily product sales using a combination of **machine learning** and **time-series forecasting** techniques.  
 It leverages both structured features (store, region, discount, holiday, etc.) and historical patterns (trend, seasonality) to generate reliable sales predictions.
 
-📂 Project Structure
+---
 
-TRAIN.csv – Training dataset with historical sales and orders (used for model development).
+## 📂 Project Structure
+- `TRAIN.csv` – Training dataset with historical sales and orders (used for model development).
+- `TEST_FINAL.csv` – Test dataset without target values (used for final predictions).
+- `custom_transformers/` – Custom Python scripts for feature engineering and preprocessing.
+- `ProductSalesForecasting.ipynb` – Jupyter Notebook containing the full workflow:  
+  *(EDA → Feature Engineering → Modeling → Evaluation → Prediction)*
 
-TEST_FINAL.csv – Test dataset without target values (used for final predictions).
+---
 
-custom_transformers/ – Custom Python scripts for feature engineering and preprocessing.
-
-ProductSalesForecasting.ipynb – Jupyter Notebook containing the full workflow (EDA → Feature Engineering → Modeling → Evaluation → Prediction).
-
-⚙️ Prerequisites
-
+## ⚙️ Prerequisites
 Before running the notebook, ensure the following:
 
-Python: Version 3.8+
+- Python **3.8+**
+- Jupyter Notebook or JupyterLab installed
+- Required Python libraries (install via `requirements.txt`):
 
-Jupyter Notebook or JupyterLab installed
-
-Required Python libraries (install via requirements.txt):
-
+```bash
 pip install -r requirements.txt
-
+```
 
 If requirements.txt is not included, install these manually:
 
+```bash
 pip install numpy pandas matplotlib seaborn scikit-learn catboost statsmodels
+```
 
 🚀 How to Run
 
@@ -44,8 +45,9 @@ custom_transformers/ (folder)
 
 Open the notebook:
 
+```bash
 jupyter notebook ProductSalesForecasting.ipynb
-
+```
 
 Run the cells sequentially. The workflow covers:
 
@@ -61,7 +63,7 @@ Model Evaluation (R², RMSE, MAE, MAPE)
 
 Predictions on TEST_FINAL.csv
 
-📊 Key Outputs
+# 📊 Key Outputs
 
 EDA Visualizations – Distribution plots, trends, and risk alerts.
 
@@ -73,7 +75,7 @@ Time-Series Model – SARIMAX to capture seasonality and exogenous factors.
 
 Final Predictions – Sales forecasts for unseen data (TEST_FINAL.csv).
 
-🛠️ Troubleshooting
+# 🛠️ Troubleshooting
 
 ModuleNotFoundError: No module named 'catboost'
 → Run pip install catboost
@@ -88,7 +90,7 @@ If you face Jupyter issues, run:
 
 pip install notebook jupyterlab
 
-📝 Notes
+# 📝 Notes
 
 TRAIN.csv is used for model training & validation.
 
@@ -98,7 +100,8 @@ Outliers are capped thoughtfully (99th percentile) to preserve business signals.
 
 Models are compared on accuracy, robustness, and ability to generalize.
 
-✅ Conclusion
+# ✅ Conclusion
 
 This project demonstrates a complete end-to-end sales forecasting pipeline, blending traditional time-series approaches (SARIMAX) with advanced ML techniques (CatBoost).
+
 The final model is designed to be production-ready and adaptable for API integration.
